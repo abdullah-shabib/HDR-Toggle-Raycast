@@ -5,7 +5,8 @@ dist
 .raycast
 .claude/
 
-# Raw screenshot inputs for scripts/make-screenshots.ps1 (the finished
-# 2000x1250 PNGs in metadata/ are committed; these source captures are not)
+# Local dev helper scripts and their inputs/outputs (kept out of the repo and the
+# store submission; the finished 2000x1250 screenshots in metadata/ are committed)
+scripts/
 shots-raw/
 _sstest_*
