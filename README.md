@@ -7,6 +7,8 @@ a multi-monitor setup you usually want HDR on only one panel — your HDR-capabl
 monitor — while the others stay in SDR. This extension lists each HDR-capable monitor and
 lets you toggle HDR on each one independently.
 
+![HDR Toggle in Raycast](metadata/hdr-toggle-2.png)
+
 ## Commands
 
 - **Toggle HDR** — Lists every HDR-capable monitor with its current state. Select a
