@@ -1,0 +1,11 @@
+node_modules
+.DS_Store
+dist
+*.log
+.raycast
+.claude/
+
+# Raw screenshot inputs for scripts/make-screenshots.ps1 (the finished
+# 2000x1250 PNGs in metadata/ are committed; these source captures are not)
+shots-raw/
+_sstest_*
