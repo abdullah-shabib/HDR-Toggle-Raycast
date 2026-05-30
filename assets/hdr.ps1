@@ -226,7 +226,13 @@ public class Hdr
                 color.header.id = t.id;
                 if (DisplayConfigGetDeviceInfo(ref color) != 0) continue;
                 useNewApi = false;
-                supported = (color.value & 0x1) != 0;
+                // Legacy advancedColorSupported (bit0) is set for both true HDR and
+                // wide-color-gamut-only displays. wideColorEnforced (bit2) flags the
+                // WCG-only panels that Windows offers no HDR toggle for, so exclude them
+                // to match Windows. (The 24H2+ HDR-specific API above avoids this entirely.)
+                bool advancedColorSupported = (color.value & 0x1) != 0;
+                bool wideColorEnforced = (color.value & 0x4) != 0;
+                supported = advancedColorSupported && !wideColorEnforced;
                 enabled = (color.value & 0x2) != 0;
             }
             if (!supported) continue;
